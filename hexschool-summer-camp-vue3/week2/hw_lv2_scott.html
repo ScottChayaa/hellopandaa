@@ -60,7 +60,7 @@
                 <div class="col-3">
                     <h5>歷史紀錄</h5>
                     <ul>
-                        <li v-for="(history, key) in histories" :key="key">
+                        <li v-for="(history, key) in histories" :key="key" v-cloak>
                             {{ history }}
                         </li>
                     </ul>
@@ -78,16 +78,32 @@
                     operator: '+',
                     result: 0,
                     histories: [],
+                    maxHistory: 10,
                 }
             },
             methods: {
+                async init() {
+                    this.histories = await this.getHistories();
+                },
+                async getHistories() {
+                    return JSON.parse(localStorage.getItem('histories'));
+                },
+                async updateHistories() {
+                    localStorage.setItem('histories', JSON.stringify(this.histories));
+                },
                 calResult() {
                     this.result = eval(`${this.num1} ${this.operator} ${this.num2}`);
                     this.histories.unshift(`${this.num1} ${this.operator} ${this.num2} = ${this.result}`);
+
+                    while (this.histories.length > this.maxHistory) {
+                        this.histories.pop();
+                    }
+
+                    this.updateHistories();
                 }
             },
             mounted() {
-                //
+                this.init();
             }
         }).mount('#app');
     </script>
