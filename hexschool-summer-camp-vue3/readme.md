@@ -7,4 +7,6 @@
   - [week2 : Vue 3 必學指令教學](https://www.youtube.com/watch?v=DUfmdaTj78k&ab_channel=%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2)
   - [week3 : Vue 3 Options API 實戰教學](https://www.youtube.com/watch?v=f3xwCDaN23I&ab_channel=%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2)
   - [week4 : Vue 3 Composition API 精髓掌握](https://www.youtube.com/watch?v=xOG-5fCvYbY&ab_channel=%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2)
-
+- 重要觀念
+  - [JavaScript 常見考題破解：物件傳值？傳參考？](https://www.youtube.com/watch?v=y1odVMpi6dU&ab_channel=%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2)
+  - [JavaScript Promise 全介紹](https://wcc723.github.io/development/2020/02/16/all-new-promise/)
